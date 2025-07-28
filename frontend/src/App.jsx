@@ -14,7 +14,7 @@ function App() {
     setError('');
     setInvoiceData(null);
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/generate-template?prompt=${encodeURIComponent(prompt)}`);
+      const response = await axios.post(`https://ai-invoice-creator-1.onrender.com/api/generate-template?prompt=${encodeURIComponent(prompt)}`);
       setInvoiceData(response.data);
     } catch (error) {
       console.error("Error generating template:", error);
